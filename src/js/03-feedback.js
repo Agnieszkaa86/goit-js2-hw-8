@@ -29,7 +29,11 @@ form.addEventListener('submit', handleSubmit);
 
 function handleSubmit(e) {
     e.preventDefault();
-    console.log(localStorage.getItem(key));
+     const record = {
+       email: email.value,
+       message: message.value,
+     };
+    console.log(record);
     localStorage.removeItem(key);
     form.reset();
 }
